@@ -9,7 +9,7 @@ sd card image.</br>
 ## How
 Just copy 'ImageBreaker.py' and 'stats' (the given or your own) where ever you</br>
 like. Create a directory there called 'img' and copy the Images of your choice</br>
-into 'img'.
+into 'img'.</br>
 Type: 'python ImageBreaker.py' - voilá: The result is written to 'out.jpg'.</br>
 The original and default format is 880x25519.</br>
 You can also write a custom format: 'python ImageBreaker.py \<width\> \<height\>'</br>
