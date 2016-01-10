@@ -1,6 +1,5 @@
 #!/usr/bin/python
 import sys
-import random
 from PIL import Image
 from glob import glob
 from random import random
@@ -132,16 +131,12 @@ if __name__ == '__main__':
     while box[2] != image.size[0]:
       image = choice(images)
       box = get_region_box(image, drift, last_height)
-      print "second Box: " + str(box)
       drift = get_drift(box, image)
       space_down = image.size[1] - box[3]
       box = random_move_down(box, space_down)
-      #box = drift_box(image, box)
       scale = get_scale(out, image)
       scaled_size = get_scaled_size(box, scale)
-      print "scaled_size: " + str(scaled_size)
       region = get_cut(image, box, scaled_size)
-      print "region_size: " + str(region.size)
       out.paste(region, (int(box[0] * scale), v_pointer))
 
     v_pointer += scaled_size[1]
